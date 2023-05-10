@@ -48,6 +48,7 @@ az role assignment create \
     --scope ${RG_SCOPE}
 ```
 ### 7. Fork the repository or copy\edit the azure-vote-static-public-ip.yaml file for testing
+.
 
 ### 8. Provision the yaml and view the service creation
 ```
@@ -57,4 +58,4 @@ kubectl apply -f azure-vote-static-public.yaml
 
 kubectl get service -w
 ```
-### 9. 
+### 9. Test 
