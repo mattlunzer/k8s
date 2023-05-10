@@ -47,15 +47,20 @@ az role assignment create \
     --role "Network Contributor" \
     --scope ${RG_SCOPE}
 ```
-### 7. Fork the repository or copy\edit the azure-vote-static-public-ip.yaml file for testing
+### 7. Fork the repository or copy\edit the azure-vote-static-public-ip.yaml file
+
+1. Edit the resource group name with your Resource Group Name
+2. Edit the public IP address with your IP
 .
 
 ### 8. Provision the yaml and view the service creation
 ```
 az aks get-credentials --resource-group [YourRg] --name [YourCluster]
-
-kubectl apply -f azure-vote-static-public.yaml
-
-kubectl get service -w
 ```
-### 9. Test 
+```
+kubectl apply -f azure-vote-static-public-ip.yaml
+```
+```
+kubectl get service
+```
+### 9. Test accessing the public ip in your browswer. You should see the voting app!
