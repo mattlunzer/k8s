@@ -1,11 +1,12 @@
 ## Deploy a k8s service type LoadBalancer with a static IP sourced from an Azure Public IP Prefix
 
 ### Set variables
+```
 rg=myAKSResourceGroup
 location=eastus
 aksName=myAKSCluster
 prefixLength=30
-
+```
 ### Create Resource Group
 ```
 az group create --name $rg --location $location
