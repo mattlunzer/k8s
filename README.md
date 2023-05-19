@@ -1,4 +1,6 @@
-## Deploy a k8s service type LoadBalancer with a static IP sourced from an Azure Public IP Prefix. Make sure you have valid requirements driving this consideration.
+### Deploy a k8s service type LoadBalancer with a static IP sourced from an Azure Public IP Prefix. 
+
+Caveat: Make sure you have valid requirements driving this consideration!
 
 ### 1. Set variables
 ```
@@ -55,7 +57,7 @@ az role assignment create \
 
 ### 8. Provision the yaml and view the service creation
 ```
-az aks get-credentials --resource-group [YourRg] --name [YourCluster]
+az aks get-credentials --resource-group $rg --name $aksName
 ```
 ```
 kubectl apply -f azure-vote-static-public-ip.yaml
